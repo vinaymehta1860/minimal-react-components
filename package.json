@@ -1,8 +1,12 @@
 {
   "name": "minimal-react-components",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "Vinay Mehta",
   "description": "Collection of basic react components for your app.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vinaymehta1860/minimal-react-components.git"
+  },
   "keywords": ["react", "components", "ui"],
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production babel components --out-dir dist --copy-files",
