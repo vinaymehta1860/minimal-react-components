@@ -2,8 +2,8 @@
 
 ### Table contents:
 
-- Installation
-- Usage
+- [Installation](#installation)
+- [Usage](#usage)
 
 ### Installation
 
