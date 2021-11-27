@@ -1,0 +1,14 @@
+export const BLACK = '#000000';
+export const BLUE = '#1F7DF7';
+export const CORNFLOWERBLUE = '#6495ED';
+export const DARKSLATEGRAY = '#2F4F4F';
+export const DIMGRAY = '#696969';
+export const GRAY = '#808080';
+export const GREEN = '#6FD91A';
+export const LIGHTBLACK = '#3B3939';
+export const LIGHTGRAY = '#D3D3D3';
+export const SLATEGRAY = '#707B7C';
+export const RED = '#E74C3C';
+export const TAN = '#D2B48C';
+export const WHITE = '#FFFFFF';
+export const WHITISH = '#F2EDED';

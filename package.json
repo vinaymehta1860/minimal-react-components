@@ -1,0 +1,23 @@
+{
+  "name": "minimal-react-components",
+  "version": "1.0.0",
+  "author": "Vinay Mehta",
+  "description": "Collection of basic react components for your app.",
+  "keywords": ["react", "components", "ui"],
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production babel components --out-dir dist --copy-files",
+    "pub": "npm publish --access=public"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  }
+}
