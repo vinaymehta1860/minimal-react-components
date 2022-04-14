@@ -1,5 +1,7 @@
 #### Thanks for using the library.
 
+![npm](https://img.shields.io/npm/v/minimal-react-components)
+
 ### Table contents:
 
 - [Installation](#installation)
@@ -12,7 +14,7 @@
 ### Usage
 
 ```
-import {Button} from 'minimal-react-components;
+import {Button} from 'minimal-react-components';
 
 const Component = () => {
   return (

@@ -1,14 +1,21 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
-import Text from '../Text';
+import { Text, WHITE } from '../';
 import Menu from './menu';
 import { Container } from './styles';
 
+/**
+ * React component
+ * @param {Array} options
+ * @param {Number} selectedItemIndex
+ * @param {Boolean} showIconForSelectedItem
+ * @param {Function} onSelect
+ * @returns 
+ */
 const Dropdown = (props) => {
   const {
-    dropdownOptions,
+    options,
     selectedItemIndex,
     showIconForSelectedItem,
     styles,
@@ -29,12 +36,24 @@ const Dropdown = (props) => {
 
   return (
     <Container ref={ref} onClick={handleDropdownClick} {...styles}>
-      <Text text={selectedItemIndex > -1 ? dropdownOptions[selectedItemIndex].label : ''} />
-      {!isDropdownOpen && <FiChevronDown size={25} />}
-      {isDropdownOpen && <FiChevronUp size={25} />}
+      <Text styles={{ color: WHITE }}>
+        {selectedItemIndex > -1 ? options[selectedItemIndex].label : ''}
+      </Text>
+      {!isDropdownOpen && (
+        <ion-icon
+          name="chevron-down-outline"
+          style={{ fontSize: '24px', color: WHITE }}
+        />
+      )}
+      {isDropdownOpen && (
+        <ion-icon
+          name="chevron-up-outline"
+          style={{ fontSize: '24px', color: WHITE }}
+        />
+      )}
       {isDropdownOpen && (
         <Menu
-          menuItems={dropdownOptions}
+          menuItems={options}
           selectedItemIndex={selectedItemIndex}
           onSelect={handleMenuItemClick}
           parentRef={ref}
@@ -47,15 +66,15 @@ const Dropdown = (props) => {
 }
 
 Dropdown.defaultProps = {
-  dropdownOptions: [],
-  selectedItemIndex: -1,
+  options: [],
+  selectedItemIndex: 0,
   showIconForSelectedItem: true,
   styles: {},
   onSelect: () => {}
 }
 
 Dropdown.propTypes = {
-  dropdownOptions: PropTypes.instanceOf(Array),
+  options: PropTypes.instanceOf(Array),
   selectedItemIndex: PropTypes.number,
   showIconForSelectedItem: PropTypes.bool,
   styles: PropTypes.instanceOf(Object),
