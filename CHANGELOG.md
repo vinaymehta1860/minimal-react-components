@@ -1,6 +1,8 @@
 ## minimal-react-components (Latest: v2.0.0)
 
-## Upcoming (v2.0.1)
+## Upcoming:
+
+## v2.0.1 (4/14/2022)
 
 - Bug fixes:
   - Removed peer dependency on react v17.0.2 which would prevent users from using this library unless they
