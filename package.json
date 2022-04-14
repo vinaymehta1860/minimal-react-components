@@ -17,7 +17,6 @@
     "pub": "npm publish --access=public",
     "start": "webpack --watch",
     "build": "rm -rf build/* && webpack",
-    "prepublish": "npm-auto-version",
     "postpublish": "git push origin --tags"
   },
   "devDependencies": {
@@ -42,8 +41,5 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "webpack": "^5.72.0"
-  },
-  "peerDependencies": {
-    "react": "^17.0.2"
   }
 }
