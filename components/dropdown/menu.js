@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import MenuItem from './menu-item';
-import { BLACK, LIGHTBLACK, WHITE, WHITISH } from '../colors';
+import { BLACK, WHITE } from '../colors';
 
 const Menu = (props) => {
   const { menuItems, selectedItemIndex, parentRef, showIconForSelectedItem, styles, onSelect } = props;
@@ -27,7 +27,7 @@ const Menu = (props) => {
   return (
     <Container
       width={styles.width}
-      top={parentRef.current.getBoundingClientRect().top + 42}
+      top={parentRef.current.getBoundingClientRect().top + 41}
       left={parentRef.current.getBoundingClientRect().left}
     >
       {renderMenuItems()}
@@ -46,9 +46,10 @@ const Container = styled.div`
   position: absolute;
   top: ${({ top }) => `${top}px`};
   left: ${({ left }) => `${left}px`};
-  color: WHITE;
-  box-shadow: 8px 8px 8px LIGHTBLACK;
-  background-color: ${LIGHTBLACK};
+  color: ${WHITE};
+  box-shadow: 10px 10px 15px -5px #999;
+  background-color: ${BLACK};
+  z-index: 100;
 `;
 
 Menu.defaultProps = {

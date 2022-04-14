@@ -1,26 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container } from './styles';
+import { Container, Input } from './styles';
 
 const Checkbox = (props) => {
-  const { isChecked, label, onClick } = props;
-
-  const [ checkboxValue, setCheckBoxValue ] = useState(isChecked);
-
-  useEffect(() => {
-    onClick && onClick(checkboxValue);
-  }, [checkboxValue]);
+  const {
+    label,
+    onClick,
+    value
+  } = props;
 
   const onSelect = (event) => {
-    setCheckBoxValue(event.target.checked);
+    onClick(event);
   };
 
   return (
     <Container>
-      <input
+      <Input
         type="checkbox"
-        checked={checkboxValue}
+        value={value}
         onChange={onSelect}
         id="check"
         name="check"
@@ -31,13 +29,13 @@ const Checkbox = (props) => {
 }
 
 Checkbox.defaultProps = {
-  isChecked: false,
+  value: {},
   label: '',
   onClick: () => {}
 }
 
 Checkbox.propTypes = {
-  isChecked: PropTypes.bool,
+  value: PropTypes.any,
   label: PropTypes.string,
   onClick: PropTypes.func
 }
