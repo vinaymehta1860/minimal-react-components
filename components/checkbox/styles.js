@@ -5,9 +5,12 @@ export const Container = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   width: fit-content;
-  height: 40px;
+  height: 30px;
   justify-content: center;
   align-items: center;
-  margin: 5px;
-  padding: 2px;
+`;
+
+export const Input = styled.input`
+  width: 16px;
+  height: 16px;
 `;

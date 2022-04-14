@@ -1,26 +1,9 @@
 import styled from 'styled-components';
 
-import { WHITE } from './colors';
+import { BLACK } from '../';
 
-const Label = styled.p`
-  font-size: ${({ type }) => {
-    if (type === 'regularText') {
-      return '15px';
-    } else if (type === 'heading') {
-      return '18px';
-    } else {
-      return '14px';
-    }
-  }};
-  font-weight: ${({ type }) => {
-    if (type === 'regularText') {
-      return 'none';
-    } else if (type === 'heading') {
-      return 'bold';
-    } else {
-      return 'none';
-    }
-  }};
-  color: ${WHITE};
+export const Label = styled.p`
+  font-size: 16px;
+  color: ${BLACK};
   margin: 3px;
 `;

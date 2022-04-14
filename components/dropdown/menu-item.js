@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FiCheck } from 'react-icons/fi';
 
-import Text from '../Text';
-import { BLUE } from '../colors';
+import { Text, WHITE } from '../';
 
 const MenuItem = (props) => {
   const { label, itemIndex, isSelected, showIconForSelectedItem, styles, onSelect } = props;
@@ -15,8 +14,8 @@ const MenuItem = (props) => {
 
   return (
     <Container width={styles.width} onClick={handleMenuItemClick}>
-      <Text text={label} />
-      {showIconForSelectedItem && isSelected && <FiCheck size={25} style={{ color: BLUE }} />}
+      <Text text={label} styles={{ color: WHITE }} />
+      {showIconForSelectedItem && isSelected && <FiCheck size={25} style={{ color: WHITE }} />}
     </Container>
   )
 }
@@ -33,7 +32,7 @@ const Container = styled.div`
   padding: 5px 10px;
 
   :hover {
-    outline: 2px solid BLUE;
+    outline: 2px solid WHITE;
   }
 `;
 
