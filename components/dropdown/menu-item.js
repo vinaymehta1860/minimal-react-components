@@ -14,7 +14,7 @@ const MenuItem = (props) => {
 
   return (
     <Container width={styles.width} onClick={handleMenuItemClick}>
-      <Text text={label} styles={{ color: WHITE }} />
+      <Text styles={{ color: WHITE }}>{label}</Text>
       {showIconForSelectedItem && isSelected && <FiCheck size={25} style={{ color: WHITE }} />}
     </Container>
   )
