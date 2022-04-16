@@ -61,6 +61,7 @@ Menu.defaultProps = {
 }
 
 Menu.propTypes = {
+  parentRef: PropTypes.any,
   menuItems: PropTypes.instanceOf(Array),
   selectedItemIndex: PropTypes.number,
   showIconForSelectedItem: PropTypes.bool,

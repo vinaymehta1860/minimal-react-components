@@ -19,6 +19,7 @@ Text.defaultProps = {
 }
 
 Text.propTypes = {
+  children: PropTypes.any,
   styles: PropTypes.instanceOf(Object),
   onClick: PropTypes.func
 }

@@ -11,7 +11,7 @@ import { Text } from '../';
 const Table = (props) => {
   const { data } = props;
 
-  const renderRow = (row, rowIndex) => {
+  const renderRow = (row) => {
     return row.map((_row, index) => {
       const { options = {} } = _row;
       const { styles = {} } = options;

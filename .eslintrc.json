@@ -1,0 +1,20 @@
+{
+  "rules": {
+    "no-console": 1, // 0 - off, 1 - warning, 2 - error
+    "no-debugger": 2,
+    "no-undef": 1
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

@@ -22,6 +22,7 @@ Button.defaultProps = {
 }
 
 Button.propTypes = {
+  children: PropTypes.any,
   styles: PropTypes.instanceOf(Object),
   onSubmit: PropTypes.func
 }

@@ -14,9 +14,11 @@
 ## Examples
 
 - [Button](#button)
+- [Card](#card)
 - [Checkbox](#checkbox)
 - [Dropdown](#dropdown)
 - [Header](#header)
+- [Modal](#modal)
 - [Table](#table)
 - [Tabs](#tabs)
 - [Text](#text)
@@ -41,6 +43,43 @@ const Component = () => {
 		</Button>
 	);
 };
+```
+
+### Card
+
+#### Props
+
+- headerContents (default: `null`)
+  - React component that should be displayed as header for the card
+- footerContents (default: `null`)
+  - React component that should be displayed as footer for the card
+- styles (default: `{}`)
+  - object to override default styles for the entire card component
+- headerStyles (default: `{}`)
+  - object to override default styles for header of card component
+- footerStyles (default: `{}`)
+  - object to override default styles for footer of card component
+
+```js
+import { Card } from 'minimal-react-components';
+
+const Component = () => {
+	return (
+		<Card
+		  headerContents={<Text styles={{ color: 'black' }}
+		  footerContents={
+				<React.Fragment>
+					<Button>Cancel</Button>
+					<Button>Submit</Button>
+				</React.Fragment>
+			}
+		>
+			<div style={{ padding: '10px' }}>
+				<Text>Your name here!</Text>
+			</div>
+		</Card>
+	)
+}
 ```
 
 ### Checkbox
@@ -118,6 +157,37 @@ const Component = () => {
 			center={<TextInput placeHolder="Search" />}
 			right={<Button>Submit</Button>}
 		/>
+	);
+};
+```
+
+### Modal
+
+#### Props
+
+- title (default: `''`)
+  - title text for modal
+- showCloseIcon (default: `false`)
+  - boolean flag indicating whether close icon should be displayed or not
+- styles (default: `{}`)
+  - an object to override default styles
+- footerContents (default: `null`)
+  - React component that should be displayed as footer for the modal
+- onClose (default: `function() {}`)
+  - function that will be called when the modal is closed using the close icon
+
+```js
+import { Modal, Button } from 'minimal-react-components';
+
+const Component = () => {
+	return (
+		<Modal
+			title="Modal title"
+			showCloseIcon
+			footerContents={<Button>Submit</Button>}
+		>
+			Modal content
+		</Modal>
 	);
 };
 ```
