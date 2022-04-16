@@ -23,7 +23,8 @@
     "build": "rm -rf build/* && webpack",
     "clean": "rm -rf node_modules package-lock.json",
     "clean-cache": "npm cache clean --force",
-    "clean-setup": "npm run clean && npm run clean-cache && npm install"
+    "clean-setup": "npm run clean && npm run clean-cache && npm install",
+    "lint": "eslint components/*"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
@@ -36,6 +37,8 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "eslint": "^8.13.0",
+    "eslint-plugin-react": "^7.29.4",
     "ionicons": "^6.0.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",

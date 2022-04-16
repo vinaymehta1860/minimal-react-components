@@ -2,7 +2,13 @@
 
 ## Upcoming:
 
-## v2.1.1 (4/14/2022)
+## v2.2.0 (4/15/2022)
+
+- Added new components
+  - Card
+  - Modal
+
+## v2.1.1 (4/15/2022)
 
 - Minor chore updates
 - Updated README
