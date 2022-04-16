@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK } from '../';
+import { BLACK } from '..';
 
 export const Label = styled.p`
   font-size: 16px;

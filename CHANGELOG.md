@@ -1,12 +1,24 @@
-## minimal-react-components (Latest: v2.0.0)
+## minimal-react-components
 
 ## Upcoming:
+
+## v2.1.1 (4/14/2022)
+
+- Minor chore updates
+- Updated README
+
+## v2.1.0 (4/15/2022)
+
+- New features:
+  - Added new components:
+    - Header
+    - Tabs
+    - TextInput
 
 ## v2.0.1 (4/14/2022)
 
 - Bug fixes:
-  - Removed peer dependency on react v17.0.2 which would prevent users from using this library unless they
-    have react >= v17.0.2
+  - Removed peer dependency on react v17.0.2 which would prevent users from using this library unless they have react >= v17.0.2
 
 ## v2.0.0 (4/14/2022)
 

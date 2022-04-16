@@ -1,31 +1,14 @@
 import styled from 'styled-components';
-import { LIGHTGRAY } from '../colors';
+import { BLACK, LIGHTGRAY } from '../colors';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   width: 100%;
   height: fit-content;
   margin: 5px;
-  padding: 2px;
-`;
-
-export const LabelsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  width: ${({ width }) => width ? `${width}` : '150px'};
-  height: fit-content;
-`;
-
-export const ValuesContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  width: 1125px;
-  height: fit-content;
-  overflow-x: scroll;
+  border: 1px solid ${BLACK};
 `;
 
 export const Row = styled.div`
