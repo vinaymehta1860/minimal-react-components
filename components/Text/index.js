@@ -4,33 +4,23 @@ import PropTypes from 'prop-types';
 import { Label } from './styles';
 
 const Text = (props) => {
-  const { children, text, type, styles, onClick } = props;
+  const { children, styles, onClick } = props;
 
-  if (text && text.length) {
-    return (
-      <Label style={styles} type={type} onClick={onClick}>
-        {text}
-      </Label>
-    )
-  } else {
-    return (
-      <Label style={styles} type={type} onClick={onClick}>
-        {children}
-      </Label>
-    )
-  }
+  return (
+    <Label style={styles} onClick={onClick}>
+      {children}
+    </Label>
+  )
 }
 
 Text.defaultProps = {
-  text: '',
-  type: 'regularText',
-  styles: {}
+  styles: {},
+  onClick: () => {}
 }
 
 Text.propTypes = {
-  text: PropTypes.any,
-  type: PropTypes.string,
-  styles: PropTypes.instanceOf(Object)
+  styles: PropTypes.instanceOf(Object),
+  onClick: PropTypes.func
 }
 
 export default Text;
