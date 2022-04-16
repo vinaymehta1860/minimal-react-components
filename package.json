@@ -1,6 +1,6 @@
 {
   "name": "minimal-react-components",
-  "version": "2.0.1",
+  "version": "2.1.1",
   "author": "Vinay Mehta",
   "description": "Collection of basic react components for your app.",
   "license": "MIT",
@@ -13,11 +13,17 @@
     "components",
     "ui"
   ],
+  "files": [
+    "index.js",
+    "build/*"
+  ],
   "scripts": {
     "pub": "npm publish --access=public",
     "start": "webpack --watch",
     "build": "rm -rf build/* && webpack",
-    "postpublish": "git push origin --tags"
+    "clean": "rm -rf node_modules package-lock.json",
+    "clean-cache": "npm cache clean --force",
+    "clean-setup": "npm run clean && npm run clean-cache && npm install"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
