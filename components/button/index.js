@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { Container } from './styles';
 
 const Button = (props) => {
-  const { children, styles, onSubmit } = props;
+  const { children, styles, onClick } = props;
 
   return (
     <Container
-      onClick={onSubmit}
+      onClick={onClick}
       style={styles}
     >
       {children}
@@ -18,13 +18,13 @@ const Button = (props) => {
 
 Button.defaultProps = {
   styles: {},
-  onSubmit: () => {}
+  onClick: () => {}
 }
 
 Button.propTypes = {
   children: PropTypes.any,
   styles: PropTypes.instanceOf(Object),
-  onSubmit: PropTypes.func
+  onClick: PropTypes.func
 }
 
 export default Button;

@@ -28,7 +28,7 @@
 
 #### Props
 
-- onSubmit (default: `function() {}`)
+- onClick (default: `function() {}`)
   - function that should be called on click of the button
 - styles (default: `{}`)
   - an object to override default styles
@@ -38,7 +38,7 @@ import { Button } from 'minimal-react-components';
 
 const Component = () => {
 	return (
-		<Button onSubmit={() => {}} styles={{ borderRadius: '5px' }}>
+		<Button onClick={() => {}} styles={{ borderRadius: '5px' }}>
 			Submit
 		</Button>
 	);
