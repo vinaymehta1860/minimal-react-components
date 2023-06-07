@@ -1,18 +1,20 @@
 import styled from 'styled-components';
 import { BLACK } from '../';
 
-export const Container = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: auto;
   height: 50px;
-  border-bottom: 1px solid ${BLACK};
+  padding-bottom: 5px;
+  margin: 5px;
+  border-bottom: 2.5px solid ${BLACK};
 `;
 
-export const Left = styled.div`
+const Left = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -20,7 +22,7 @@ export const Left = styled.div`
   align-items: center;
 `;
 
-export const Center = styled.div`
+const Center = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -28,10 +30,17 @@ export const Center = styled.div`
   align-items: center;
 `;
 
-export const Right = styled.div`
+const Right = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center
 `;
+
+export {
+  Container,
+  Left,
+  Center,
+  Right
+}

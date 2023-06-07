@@ -22,7 +22,8 @@ export const Tab = styled.div`
   height: 40px;
   margin: 5px 2px;
   padding: 0 22px;
-  background-color: ${({ active }) => active ? SLATEGRAY : 'transparent'};
+  outline: ${({ active }) => active ? `2px solid ${SLATEGRAY}` : 'none'};
+  /* background-color: 'transparent'; */
   color: WHITE;
   border-radius: 10px;
   cursor: pointer;

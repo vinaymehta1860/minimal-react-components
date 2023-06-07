@@ -2,6 +2,11 @@
 
 ## Upcoming:
 
+## v2.2.1 (06/06/2023)
+
+* Button:
+  * Renamed `onSubmit` function to `onClick` as that is more intuitive.
+
 ## v2.2.0 (4/15/2022)
 
 - Added new components
