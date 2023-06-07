@@ -139,7 +139,7 @@ const Component = () => {
 #### Props
 
 - left
-- React element that will be displayed on the left side of Header
+	- React element that will be displayed on the left side of Header
 - center
   - React element that will be displayed in the middle of Header component
 - right
