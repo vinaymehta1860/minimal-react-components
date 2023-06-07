@@ -1,6 +1,6 @@
 {
   "name": "minimal-react-components",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "author": "Vinay Mehta",
   "description": "Collection of basic react components for your app.",
   "license": "MIT",
@@ -24,7 +24,8 @@
     "clean": "rm -rf node_modules package-lock.json",
     "clean-cache": "npm cache clean --force",
     "clean-setup": "npm run clean && npm run clean-cache && npm install",
-    "lint": "eslint components/*"
+    "lint": "eslint components/*",
+    "build-and-publish": "npm run build && npm run publish"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",

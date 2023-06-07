@@ -34,33 +34,48 @@ const Dropdown = (props) => {
     onSelect(newMenuItemSelected);
   };
 
+  const renderIcon = () => {
+    return (
+      <React.Fragment>
+        {
+          isDropdownOpen ?
+            <ion-icon
+                name="chevron-up-outline"
+                style={{ fontSize: '24px', color: WHITE }}
+            /> :
+            <ion-icon
+                name="chevron-down-outline"
+                style={{ fontSize: '24px', color: WHITE }}
+            />
+        }
+      </React.Fragment>
+    )
+  }
+
+  const renderOptions = () => {
+    if (!isDropdownOpen) {
+      return undefined;
+    }
+
+    return (
+      <Menu
+        menuItems={options}
+        selectedItemIndex={selectedItemIndex}
+        onSelect={handleMenuItemClick}
+        parentRef={ref}
+        showIconForSelectedItem={showIconForSelectedItem}
+        styles={styles}
+      />
+    )
+  }
+
   return (
     <Container ref={ref} onClick={handleDropdownClick} {...styles}>
       <Text styles={{ color: WHITE }}>
         {selectedItemIndex > -1 ? options[selectedItemIndex].label : ''}
       </Text>
-      {!isDropdownOpen && (
-        <ion-icon
-          name="chevron-down-outline"
-          style={{ fontSize: '24px', color: WHITE }}
-        />
-      )}
-      {isDropdownOpen && (
-        <ion-icon
-          name="chevron-up-outline"
-          style={{ fontSize: '24px', color: WHITE }}
-        />
-      )}
-      {isDropdownOpen && (
-        <Menu
-          menuItems={options}
-          selectedItemIndex={selectedItemIndex}
-          onSelect={handleMenuItemClick}
-          parentRef={ref}
-          showIconForSelectedItem={showIconForSelectedItem}
-          styles={styles}
-        />
-      )}
+      {renderIcon()}
+      {renderOptions()}
     </Container>
   )
 }
