@@ -5,6 +5,14 @@ import { Container } from './styles';
 
 const Button = (props) => {
   const { children, styles, onClick } = props;
+  /**
+   * Untill v2.2.0, onSubmit was the only prop accepted which was later
+   * renamed to onClick. That is why the following piece of code exists
+   * so as to avoid major version upgrade.
+   */
+  if (props.onSubmit) {
+    props.onSubmit = onClick;
+  }
 
   return (
     <Container
